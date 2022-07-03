@@ -1,0 +1,519 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --ff1: "SEGOE UI", Arial, Sans-serif;
+  --ff2: "Lato", sans-serif;
+  --bg-hover: #cccccc;
+  --red: #f44336;
+  --grey: #757575;
+  --grey-bg: #f7f7f7;
+  --green: #009688;
+  --grey-hover: #cccccc;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+body {
+  background: var(--grey-bg);
+}
+/* mobile */
+.ticket {
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60px;
+  width: 100%;
+  display: none;
+  padding: 10px;
+}
+.ticket-head {
+  background: var(--green);
+  --height: 100px;
+  position: relative;
+  color: white;
+}
+.ticket-head p {
+  text-align: center;
+  line-height: var(--height);
+  font-size: 30px;
+  font-family: var(--ff1);
+  letter-spacing: 2px;
+}
+.ticket-head p i {
+  margin-right: 20px;
+}
+.ticket-head span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+.ticket-head span:hover {
+  background: var(--grey-hover);
+  color: #000;
+}
+.ticket-head span:hover {
+  cursor: pointer;
+}
+
+.ticket-main {
+  background: white;
+  padding: 20px;
+  font-family: var(--ff2);
+}
+.ticket-content .second {
+  margin-top: 20px;
+}
+.ticket-content p i {
+  margin-right: 5px;
+}
+.ticket-content input {
+  margin-top: 20px;
+  border: 1px solid #cccccc;
+}
+.ticket-content button {
+  width: 100%;
+  background: var(--green);
+  text-align: center;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 15px;
+}
+.ticket-content button i {
+  margin-left: 5px;
+}
+.ticket-content button:hover {
+  cursor: pointer;
+  background: var(--grey-hover);
+  color: #000;
+}
+.ticket-option {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticket-option button {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 15px;
+}
+.ticket-option button i {
+  margin-left: 5px;
+}
+.ticket-option button:hover {
+  cursor: pointer;
+  background: var(--grey-hover);
+  color: #000;
+}
+.ticket-option a {
+  text-decoration: underline;
+  color: blue;
+  margin-left: 5px;
+}
+.ticket-option a:hover {
+  background: white;
+  color: blue;
+}
+nav {
+  /* padding: 15px 20px; */
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: #000;
+  text-transform: uppercase;
+  font-family: var(--ff2);
+}
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  /* gap: 40px; */
+}
+.nav-toggle:hover {
+}
+.search-icon {
+  display: none;
+}
+.caret {
+  margin-left: 5px;
+}
+.toogle-icon {
+  /* padding: 15px; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+}
+.toogle-icon:hover {
+  background: var(--bg-hover);
+  color: #000;
+  cursor: pointer;
+}
+.option a {
+  display: none;
+  padding: 15px 20px;
+  /* display: inline-block; */
+}
+.option a:first-child {
+  display: block;
+}
+.dropdown-menu {
+  display: none;
+}
+a:hover {
+  background: var(--bg-hover);
+  color: #000;
+}
+.slide img {
+  width: 100vw;
+}
+.text-img {
+  display: none;
+}
+.text-img p:first-child {
+  font-family: var(--ff1);
+  font-size: 24px;
+}
+.text-img p:nth-child(2) {
+  font-family: var(--ff2);
+  margin-top: 10px;
+}
+.intro {
+  /* margin: 50px 10px; */
+  margin-top: 50px;
+}
+.text {
+  text-align: center;
+}
+.text h3 {
+  font-family: var(--ff1);
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.text p {
+  text-align: justify;
+  margin-top: 20px;
+}
+.text .first {
+  text-align: center;
+  color: var(--grey);
+}
+.text p {
+  font-family: var(--ff2);
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 30px; */
+  text-align: center;
+  font-family: var(--ff2);
+  margin-top: 50px;
+}
+.card img {
+  margin-top: 20px;
+  border-radius: 8px;
+  max-width: 60%;
+}
+.tour {
+  background: #000;
+  padding: 50px 10px;
+  border: 1px solid blue;
+}
+.intro {
+  text-align: center;
+  padding: 10px;
+}
+.intro h2 {
+  color: white;
+  font-size: 30px;
+  font-family: var(--ff1);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.intro .first {
+  color: #656565;
+  margin-top: 20px;
+  font-family: var(--ff2);
+}
+.month {
+  font-family: var(--ff2);
+  background: white;
+  margin: 20px 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--grey);
+}
+.row.last {
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.round {
+  background: #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: white;
+  text-align: center;
+}
+.sold {
+  background: var(--red);
+  color: white;
+  padding: 5px;
+  margin-left: 20px;
+}
+.places {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff2);
+}
+.place {
+  display: flex;
+  flex-direction: column;
+}
+.place img {
+  /* max-width: 50%; */
+  width: 100%;
+}
+.desc {
+  background: white;
+  padding: 20px;
+}
+.desc p:not(:first-child) {
+  margin-top: 10px;
+}
+.desc button {
+  margin-top: 10px;
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border: none;
+}
+.desc button:hover {
+  cursor: pointer;
+  background: var(--grey-hover);
+  color: #000;
+  border: none;
+}
+.time {
+  color: var(--grey);
+}
+.contact {
+  padding: 50px 10px;
+  text-align: center;
+}
+.contact h2 {
+  font-family: var(--ff1);
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 30px;
+}
+.contact p {
+  font-family: var(--ff2);
+}
+.contact .first {
+  color: var(--grey);
+  margin-top: 20px;
+}
+.info-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  text-align: justify;
+}
+.info p {
+  line-height: 30px;
+}
+.info span {
+  margin-right: 15px;
+}
+.textbox {
+  margin-top: 10px;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-transform: capitalize;
+  color: var(--grey);
+  border-radius: 0;
+  border: 1px solid black;
+}
+#message {
+  margin-top: 10px;
+}
+#email {
+  border-top: none;
+}
+#submit {
+  float: right;
+  background: #000;
+  text-transform: uppercase;
+  color: white;
+  width: 70px;
+  margin-top: 10px;
+  border: none;
+}
+#submit:hover {
+  cursor: pointer;
+  background: var(--grey);
+  color: black;
+}
+.footer {
+  margin-bottom: 80px;
+}
+.footer img {
+  filter: grayscale(50%);
+  width: 100%;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 5px;
+  font-size: 24px;
+  opacity: 0.5;
+}
+.footer p {
+  text-align: center;
+  margin-top: 20px;
+  font-family: var(--ff2);
+  color: var(--grey);
+}
+.footer a {
+  color: var(--grey);
+  text-decoration: underline;
+}
+.footer a:hover {
+  background: white;
+}
+.dropdown-menu {
+  position: relative;
+}
+.drop-icon {
+  display: block;
+  position: absolute;
+  background: white;
+  width: 150px;
+  display: none;
+}
+.drop-icon a {
+  padding: 10px 20px;
+  color: black;
+  text-transform: none;
+}
+.drop-icon a:hover {
+  background: #cccccc;
+}
+.dropdown-menu:hover .drop-icon {
+  display: block;
+}
+/* desktop */
+@media screen and (min-width: 600px) {
+  .ticket {
+    width: 80%;
+  }
+  .option {
+    display: flex;
+  }
+  .option a {
+    display: block;
+  }
+  .dropdown-menu {
+    display: block;
+  }
+  .toogle-icon {
+    display: none;
+  }
+  .search-icon {
+    display: block;
+    padding: 15px;
+  }
+  .search-icon:hover {
+    background: var(--red);
+    cursor: pointer;
+  }
+  .cards {
+    flex-direction: row;
+  }
+  .month {
+    margin: 20px;
+  }
+  .places {
+    flex-direction: row;
+    padding: 20px;
+  }
+  .place img {
+    /* max-width: 50%; */
+  }
+  .info-form {
+    padding: 0 20px;
+    flex-direction: row;
+    /* margin-top: 20px; */
+    justify-content: space-between;
+  }
+  .textbox {
+    margin-top: 0;
+    width: 50%;
+  }
+  .input-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+  #email {
+    border-top: 1px solid #000;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .month {
+    margin: 20px 20%;
+  }
+  .places {
+    padding: 20px 20%;
+  }
+  .info-form {
+    padding: 0 20%;
+  }
+  .textbox {
+  }
+  .slide {
+    position: relative;
+  }
+  .slide img {
+    max-width: 100%;
+  }
+  .text-img {
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+  }
+  .text {
+    margin: 0 20%;
+  }
+}
